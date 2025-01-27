@@ -21,7 +21,6 @@ const useWeatherInfo = (city) => {
             .then((cityWeather) => {
                 setWeatherData(cityWeather)
             })
-            .catch((msg) => console.error(msg));
     }, [city]);
 
     return weatherData
