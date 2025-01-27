@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-// import apiKey from "../assets/apiKey.js";
 
 const useWeatherInfo = (city) => {
 
-    const apiKey = process.env.OPENWEATHERMAP_API_KEY
+    const apiKey = import.meta.env.VITE_API_KEY
 
     const [weatherData, setWeatherData] = useState(false)
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useWeatherInfo from "./hooks/useWeatherInfo";
 
 function App() {
