@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Add, Show, Todo } from "./components";
 import { TodoProvider } from "./context";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -46,6 +47,7 @@ function App() {
     <TodoProvider
       value={{ addTodo, deleteTodo, todos, toggleChecked, updateTodo }}
     >
+      <Analytics />
       <div className="w-full h-screen bg-black flex flex-wrap flex-col items-center pt-24 px-5">
         <h1 className="text-5xl text-primary m-0 mb-14 font-light">
           Just do it!
@@ -69,15 +71,15 @@ function App() {
                   </div>
                 ) : null
               )}
-              { showFinish ? null :
-              todos.map((todo) =>
+          {showFinish
+            ? null
+            : todos.map((todo) =>
                 todo.checked === false ? (
                   <div className="w-full " key={todo.id}>
                     <Todo todo={todo} />
                   </div>
                 ) : null
-              )
-              }
+              )}
         </div>
       </div>
     </TodoProvider>
