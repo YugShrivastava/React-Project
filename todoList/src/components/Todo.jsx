@@ -24,7 +24,7 @@ function Todo({ todo }) {
 
   return (
     <div className="mb-1 flex flex-wrap items-center justify-between w-full">
-      <div className="flex flex-wrap gap-3 items-center justify-baseline sm:w-[85%]">
+      <div className="flex flex-wrap items-center justify-baseline sm:w-[85%]">
         <Input
           width={"w-3"}
           height={"h-3"}
