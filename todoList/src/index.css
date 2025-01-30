@@ -1,1 +1,24 @@
 @import "tailwindcss";
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+:root {
+  --primary-color: #ff00fb;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.border-primary {
+  border-color: var(--primary-color);
+  box-sizing: border-box;
+}
+
+.border-hover:hover {
+  border: 1px solid var(--primary-color);
+  background-color: black;
+  color: var(--primary-color);
+}
